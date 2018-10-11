@@ -141,11 +141,14 @@
   <script src="js/main.js"></script>
   <script src="js/vendor/masonry.min.js"></script>
   <script>
-	$('.grid').masonry({
+  	$(document).ready(function(){
+  			$('.grid').masonry({
 	  // options
 	  itemSelector: '.grid-item',
 	  columnWidth: 320
-	});
+		});
+  	})
+
   </script>
 
 </body>
