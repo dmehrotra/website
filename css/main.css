@@ -311,5 +311,12 @@ body { font-family: sans-serif; }
 }
 
 
-
+@media only screen and (max-width: 510px) {
+    ul.link-list{
+    padding: 0px;
+    font-size: 13px;
+    float: left;
+    margin-top: 7px;
+    }
+}
 
