@@ -131,6 +131,12 @@ a{color:#0000ff;}
     color:black;
     text-decoration: none;
 }
+.grid-item .link-list li a{
+    color:white;
+}
+.grid-item:hover .link-list li a{
+    color:blue;
+}
 .link-list li a:hover, h1 a:hover{
     color:blue;
     text-decoration:underline;
@@ -138,6 +144,7 @@ a{color:#0000ff;}
 #site-content{
     width:95%;
     margin:auto;
+    box-sizing: border-box;
 }
 
 img{
@@ -248,7 +255,8 @@ body { font-family: sans-serif; }
 /* ---- grid-item ---- */
 
 .grid-item {
-  width: 280px;
+    box-sizing:border-box;
+  width: 300px;
   padding:5px;
   float: left;
   margin:5px;
@@ -285,9 +293,9 @@ body { font-family: sans-serif; }
 .othernet{background-image: url("../img/othernet.png");}
 .satellite{background-image: url("../img/sat-sounds.jpg");}
 
-.dod{background-image: url("../img/dod.png");}
+.dod{background-image: url("../img/dod.png");color:white;}
 .gizmodo{background-image: url("../img/gizmodo.png");}
-.craters{    background-image: url(../img/craters.gif);
+.craters{    background-image: url("../img/craters.gif");
     background-size: 100%;
     background-color: black;
     background-position-y: 33%;}
@@ -301,6 +309,7 @@ body { font-family: sans-serif; }
     color:black
 }
 .info, .statement{
+    background:white;
     opacity:0;
 }
 .grid-item:hover .info, .grid-item:hover .statement, .grid-item:hover .link-list{
@@ -309,14 +318,55 @@ body { font-family: sans-serif; }
 .craters:hover .title, .doppel:hover .title,.satellite:hover .title{
     color:black;
 }
+.dod:hover{
+    color:black;
+}
+
+@media only screen and (max-width: 1330px) {
+    .grid{
+        display: flex;
+        display: -webkit-flex; /* Safari */
+
+    }
+    .grid-item{
+      width:500px;
+
+    }
+}
+@media only screen and (max-width: 1130px) {
+    .grid{
+        display: flex;
+        display: -webkit-flex; /* Safari */
+
+    }
+    .grid-item{
+      width:100%;
+
+    }
+}
 
 
 @media only screen and (max-width: 600px) {
     .grid{
         margin:80px 0px;
+
     }
     .grid-item{
             width: 100%;
+            background-image: none;
+                background-color: white;
+
+    }
+    #site-content{
+        width:100%;
+    }
+    .info, .statement{
+    background:white;
+    opacity:1;
+    color:black;
+    }
+    .title, .doppel .title, .craters .title, .satellite .title, .othernet .title{
+        color:black;
     }
     ul.link-list{
     padding: 0px;
@@ -325,4 +375,5 @@ body { font-family: sans-serif; }
     margin-top: 7px;
     }
 }
+
 
